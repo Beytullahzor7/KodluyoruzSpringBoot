@@ -22,4 +22,11 @@ public class ThymeleafController {
         model.addAttribute("key_form2","Ben 2. kez modelden geldim.");
         return "thymeleaf1";
     }
+
+    // http://localhost:8080/thymeleaf4
+    @GetMapping("/thymeleaf4")
+    public String getThymeleaf4Model(Model model){
+        model.addAttribute("key_model1", "Ben model yapısından geldim");
+        return "thymeleaf4";
+    }
 }
