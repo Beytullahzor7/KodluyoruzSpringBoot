@@ -4,7 +4,7 @@ import com.kodluyoruz.dto.ProductDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,5 +61,16 @@ public class ThymeleafController {
         myList.add(ProductDto.builder().productId(2L).productName("Urun Adi3").productPrice(4500).build());
         model.addAttribute("product_list", myList);
         return "thymeleaf6";
+    }
+
+    // http://localhost:8080/thymeleaf7/5
+    @GetMapping( {"/thymeleaf7","/thymeleaf7/{id}"} )
+    public String getThymeleafModelObject2(Model model, @PathVariable(name = "id", required = false) Long id){
+        if(id != null){
+            model.addAttribute("key_modelpathvariable", "id: " + id);
+        }else{
+            model.addAttribute("key_modelpathvariable", "Id could not find!");
+        }
+        return "thymeleaf7";
     }
 }
