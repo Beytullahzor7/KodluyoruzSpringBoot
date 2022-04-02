@@ -6,23 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
-<body class="container">
+<body class="container bg-dark-blue">
 <!--start codes-->
 
-<h1 class="text-center text-primary">Thymeleaf4</h1>
-<h2>Tymeleaf-4</h2>
+<h1 class="text-center text-primary">TymeleafModelObject</h1>
+<h2 class="text-center">TymeleafModelObject</h2>
 <h2 th:text="'thymeleaf Tymeleaf-1'"></h2>
 <hr>
-<p th:text="${key_model1}"></p>
 
-<form action="">
-    <div class="form-group">
-        <label th:text="#{nameandsurname}" for="name_surname"></label>
-        <input type="text" class="form-control" placeholder="Adiniz Soyadiniz" name="name_surname" id="name_surname"
-               autofocus required>
-        <button class="btn btn-primary mt-3">Gonder</button>
-    </div>
-</form>
+<p th:text="${key_modelObject1}"></p>
+<p th:text="${key_modelObject2}"></p>
+
 <!--ends codes-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
